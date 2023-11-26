@@ -1,5 +1,7 @@
-.cards {
-    padding: 40px 0;
+/* Add this style to override any existing styles for the row */
+#eventos-container.row {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .card {
@@ -11,7 +13,13 @@
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s; /* Add a smooth transition effect on hover */
-    width: 100%; /* Ensure cards take full width on small screens */
+    width: calc(33.3333% - 20px); /* Three cards in a row with some margin between them */
+    margin-right: 20px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.card:last-child {
+    margin-right: 0; /* Remove margin for the last card in the row */
 }
 
 .card:hover {
@@ -37,16 +45,13 @@
 }
 
 /* Media query for responsive design */
-@media (min-width: 768px) {
+@media (max-width: 767px) {
     .card {
-        width: calc(33.3333% - 20px); /* Three cards in a row with some margin between them */
-        margin-right: 20px;
-    }
-
-    .card:last-child {
-        margin-right: 0; /* Remove margin for the last card in the row */
+        width: 100%; /* Cards take full width on small screens */
+        margin-right: 0; /* Remove margin for small screens */
     }
 }
+
 
 
 
