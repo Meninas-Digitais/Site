@@ -1,4 +1,40 @@
- .u-section-1 {
+.cards {
+    padding: 40px 0;
+}
+
+.card {
+    background-color: #ffffff; 
+    border: 1px solid #000000; 
+    border-radius: 15px; 
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card img {
+    border-radius: 50%;
+    max-width: 120px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333333; /
+}
+
+.card p {
+    margin: 8px 0;
+    color: #3b3a3a;
+}
+
+
+
+
+
+.u-section-1 {
   background-image: none;
 }
 
