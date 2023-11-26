@@ -48,6 +48,21 @@
     max-width: calc(33.333% - 20px);
     margin-bottom: 20px;
 }
+/* Estilo para dispositivos menores que telas médias */
+@media (max-width: 767px) {
+    .col-md-4 {
+        flex: 0 0 calc(50% - 20px); /* 50% de largura para duas colunas em telas menores */
+        max-width: calc(50% - 20px);
+    }
+}
+
+/* Estilo para dispositivos menores que telas pequenas */
+@media (max-width: 576px) {
+    .col-md-4 {
+        flex: 0 0 calc(100% - 20px); /* 100% de largura para uma coluna em telas pequenas */
+        max-width: calc(100% - 20px);
+    }
+}
 
 .u-section-1 {
   background-image: none;
