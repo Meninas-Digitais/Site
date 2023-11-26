@@ -1,7 +1,10 @@
-/* Add this style to override any existing styles for the row */
+/* No changes in the .cards and .card styles, just adjustments for the row and media query */
+
 #eventos-container.row {
     display: flex;
     flex-wrap: wrap;
+    margin-right: -15px; /* Negative margin to counteract column margins */
+    margin-left: -15px; /* Negative margin to counteract column margins */
 }
 
 .card {
@@ -13,13 +16,14 @@
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s; /* Add a smooth transition effect on hover */
-    width: calc(33.3333% - 20px); /* Three cards in a row with some margin between them */
-    margin-right: 20px;
+    width: calc(33.3333% - 30px); /* Three cards in a row with some margin between them */
+    margin-right: 30px; /* Adjusted margin for better spacing */
+    margin-left: 15px; /* Adjusted margin for better spacing */
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 .card:last-child {
-    margin-right: 0; /* Remove margin for the last card in the row */
+    margin-right: 15px; /* Adjusted margin for the last card in the row */
 }
 
 .card:hover {
@@ -51,7 +55,6 @@
         margin-right: 0; /* Remove margin for small screens */
     }
 }
-
 
 
 
