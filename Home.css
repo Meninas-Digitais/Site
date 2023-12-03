@@ -1,4 +1,70 @@
- .u-section-1 {
+/* Estilo para o container dos cards */
+.cards {
+  padding: 20px;
+}
+
+/* Estilo para os cards individuais */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease-in-out;
+  height: 100%;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Estilo para a imagem dentro do card */
+.card img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Estilo para o título do evento */
+.card h3 {
+  margin: 10px 0;
+}
+
+/* Estilo para a descrição do evento */
+.card p {
+  margin: 0;
+  padding: 10px;
+}
+
+/* Estilo para a linha de três eventos */
+.row-cols-md-3 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Estilo para ajustar o tamanho dos cards */
+.col-md-4 {
+  flex: 0 0 calc(33.333% - 20px); /* 33.333% para exibir três por linha, menos o espaçamento entre eles */
+  max-width: calc(33.333% - 20px);
+  margin-bottom: 20px;
+}
+/* Estilo para dispositivos menores que telas médias */
+@media (max-width: 767px) {
+  .col-md-4 {
+      flex: 0 0 calc(50% - 20px); /* 50% de largura para duas colunas em telas menores */
+      max-width: calc(50% - 20px);
+  }
+}
+
+/* Estilo para dispositivos menores que telas pequenas */
+@media (max-width: 576px) {
+  .col-md-4 {
+      flex: 0 0 calc(100% - 20px); /* 100% de largura para uma coluna em telas pequenas */
+      max-width: calc(100% - 20px);
+  }
+}
+
+.u-section-1 {
   border-style: dashed;
 }
 
