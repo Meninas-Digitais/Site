@@ -56,7 +56,7 @@ function loadGaleriaFromGoogleSheet() {
                 galeriaDiv.className = 'col-md-4';
                 galeriaDiv.innerHTML = `
                     <div class="card">
-                        <img src="${foto}" alt="${titulo}" class="img-fluid">
+                        <img src="${foto}" class="img-fluid">
                     </div>
                 `;
                 galeriaContainer.appendChild(galeriaDiv);
