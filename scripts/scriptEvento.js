@@ -53,12 +53,10 @@ function loadGaleriaFromGoogleSheet() {
             const galeriaContainer = document.getElementById('galeria-container');
             data.forEach(function (row) {
                 const foto = row[0];
-                const titulo = row[1];
                 const galeriaDiv = document.createElement('div');
                 galeriaDiv.className = 'col-md-4';
                 galeriaDiv.innerHTML = `
                     <div class="card">
-                        <h3>${titulo}</h3>
                         <img src="${foto}" class="img-fluid">
                     </div>
                 `;
