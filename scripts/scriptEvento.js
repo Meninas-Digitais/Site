@@ -39,5 +39,31 @@ function loadEventosFromGoogleSheet() {
     });
 }
 
+function loadGaleriaFromGoogleSheet() {
+    const spreadsheetId = '1vzADqzTkra7N4Mv7zAb_r7_Hp1iIhJcnNOw12W02gws'; 
+    const sheetName = 'GALERIA'; 
+    gapi.client.sheets.spreadsheets.values.get({
+        spreadsheetId: spreadsheetId,
+        range: sheetName
+    }).then(function (response) {
+        const data = response.result.values;
+
+        if (data.length > 0) {
+            const galeriaContainer = document.getElementById('galeria-container');
+            data.forEach(function (row) {
+                const foto = row[0];
+                const galeriaDiv = document.createElement('div');
+                galeriaDiv.className = 'col-md-4';
+                galeriaDiv.innerHTML = `
+                    <div class="card">
+                        <img src="${foto}" alt="${titulo}" class="img-fluid">
+                    </div>
+                `;
+                galeriaContainer.appendChild(galeriaDiv);
+            });
+        }
+    });
+}
+
 gapi.load('client', initGoogleSheetsApi);
  
