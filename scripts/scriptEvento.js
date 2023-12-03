@@ -4,6 +4,7 @@ function initGoogleSheetsApi() {
         discoveryDocs: ['https://sheets.googleapis.com/$discovery/rest?version=v4'],
     }).then(function () {
         loadEventosFromGoogleSheet();
+        loadGaleriaFromGoogleSheet();
     });
 }
 
