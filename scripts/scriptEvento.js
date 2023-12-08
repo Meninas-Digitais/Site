@@ -46,14 +46,16 @@ function loadPosts() {
 
       return res.json();
     })
-    .then((res) => {
+    .then(async (res) => {
       const { posts } = res.data;
       console.log(res.data);
 
       const productsList = document.getElementById("eventos-container");
 
-      posts.map((post) => {
-        const foto = post.imagem.url;
+      console.log(productsList);
+
+      await posts.map((post) => {
+        const foto = post.imagem?.url;
         const titulo = post.title;
         const descricao = post.description.html;
 
@@ -67,6 +69,7 @@ function loadPosts() {
                       
                     </div>
                 `;
+        console.log(post);
         productsList.appendChild(eventosDiv);
       });
     });
